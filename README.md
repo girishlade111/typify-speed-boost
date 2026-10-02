@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# TypeMaster — Typing Speed Training
 
-## Project info
+A professional typing speed training web app: timed typing tests, accuracy
+tracking, lessons, and progress stats — all client-side, no login, no backend.
 
-**URL**: https://lovable.dev/projects/9e6fafd3-cf04-4e9e-aa0f-fbe10d223aeb
+## Features
 
-## How can I edit this code?
+- **Typing tests** — timed sessions with live WPM (words per minute) and accuracy feedback
+- **Progress tracking** — session history and performance stats
+- **Lessons & practice modes** — structured exercises to improve speed and precision
+- **Responsive UI** — built with shadcn/ui + Tailwind CSS, works on desktop and mobile
 
-There are several ways of editing your application.
+## Tech stack
 
-**Use Lovable**
+- React 18 + TypeScript + Vite
+- Tailwind CSS, shadcn/ui, Radix UI primitives
+- React Router, React Hook Form, Recharts
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9e6fafd3-cf04-4e9e-aa0f-fbe10d223aeb) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Quick start
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev      # dev server on http://localhost:8080
+npm run build    # production build -> dist/
+npm run lint     # eslint
 ```
 
-**Edit a file directly in GitHub**
+Node.js 18+ recommended.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project structure
 
-**Use GitHub Codespaces**
+```
+src/
+  main.tsx            # entry point
+  App.tsx             # router + providers
+  pages/              # Index (landing + test), NotFound
+  components/         # TypingTest, HeroSection, FeaturesSection, Header, Footer
+  components/ui/      # shadcn/ui primitives
+  hooks/ lib/         # utilities
+public/               # static assets
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploy
 
-## What technologies are used for this project?
+Static site. `vite build` emits `dist/`, which is served from the repo root via
+GitHub Pages (`base` is set to `/typify-speed-boost/` in `vite.config.ts`).
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+MIT
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/9e6fafd3-cf04-4e9e-aa0f-fbe10d223aeb) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built by Girish Lade — https://ladestack.in
